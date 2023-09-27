@@ -21,6 +21,7 @@ class _LoginPageState extends State <LoginPage>{
    final TextEditingController _emailController = TextEditingController();
    final TextEditingController _passwordController = TextEditingController();
 
+  
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -58,6 +59,9 @@ class _LoginPageState extends State <LoginPage>{
                           if (_emailController.text.isEmpty) {
                             return "This field can't be empty";
                           }
+                           if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(_emailController.text)) {
+                return 'Please enter a valid email.';
+              }
                         },
                         style: GoogleFonts.poppins(
                           color: ThemeColors.whiteTextColor,

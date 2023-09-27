@@ -94,6 +94,9 @@ class _SignUpPageState extends State<SignUpPage> {
                           if (_emailController.text.isEmpty) {
                             return "This field can't be empty";
                           }
+                           if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(_emailController.text)) {
+                return 'Please enter a valid email.';
+              }
                         },
                         style: GoogleFonts.poppins(
                           color: ThemeColors.whiteTextColor,
@@ -124,6 +127,8 @@ class _SignUpPageState extends State<SignUpPage> {
                           if (_phoneController.text.isEmpty) {
                             return "This field can't be empty";
                           }
+                           if (!RegExp(r'^[0-10]{11}$').hasMatch(_phoneController.text)) {
+                return 'Please enter a valid 11-digit phone number.';}
                         },
                         style: GoogleFonts.poppins(
                           color: ThemeColors.whiteTextColor,
@@ -154,6 +159,12 @@ class _SignUpPageState extends State<SignUpPage> {
                           if (_passwordController.text.isEmpty) {
                             return "This field can't be empty";
                           }
+                              if (_passwordController.text.length < 8) {
+                return 'Password must be at least 6 characters long.';
+              }
+              if (!RegExp(r'^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{6,}$').hasMatch(_passwordController.text)) {
+                return 'Password must contain at least one uppercase letter, one lowercase letter, and one digit.';
+              }
                         },
                         obscureText: true,
                         style: GoogleFonts.poppins(
