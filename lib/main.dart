@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'AnswerSmith',
+      title: 'CONVOCART',
       theme: ThemeData(
         primaryColor: ThemeColors.primaryColor,
         scaffoldBackgroundColor: ThemeColors.scaffoldBgColor,

@@ -5,6 +5,7 @@ import 'package:grad/components/main_button.dart';
 import 'package:grad/helpers/font_size.dart';
 import 'package:grad/helpers/theme_colors.dart';
 import 'package:grad/pages/login_page.dart';
+import 'package:grad/pages/signup_page.dart';
 
 class StartPage extends StatefulWidget{
   const StartPage({super.key});
@@ -19,7 +20,7 @@ class _StartPageState extends State <StartPage>{
   Widget build(BuildContext context) {
     return Scaffold(body: Stack(
       children: [
-        Image.asset('assets/images/duckkkk.png',
+        Image.asset('assets/images/convo.jpg',
         height: MediaQuery.of(context).size.height,
         fit: BoxFit.fitHeight,
         ),
@@ -37,31 +38,29 @@ class _StartPageState extends State <StartPage>{
               ),
             ),
           ),
+          
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.all(32.0),
               child: Column(
                 children: [
-                  Align(
+                  const Align(
                     alignment: Alignment.topCenter,
-                    child: Text(
-                      'AnswerSmith',
-                      style: GoogleFonts.poppins(
-                        color :const Color.fromARGB(255, 232, 222, 44),
-                        fontSize: FontSize.xxxLarge,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
+                    
                   ),
                  const Spacer(),
+                 const Padding(padding: EdgeInsets.only(top:500),),
                   Text(
-                    'we are Always there for you',
+                    'Let\'s get Started',
                     textAlign: TextAlign.center,
                     style: GoogleFonts.poppins(
-                      color: const Color.fromARGB(255, 157, 158, 138),
+                      color: ThemeColors.navyTextColor,
                       fontSize: FontSize.large,
+                      fontWeight: FontWeight.bold
                     ),
                   ),
+                 
+                  const Spacer(),
                 Padding(
                   padding:const EdgeInsets.only(top: 25),
                   child: MainButton(
@@ -72,8 +71,16 @@ class _StartPageState extends State <StartPage>{
                         ),
                         result: false ,
                     ),
-                    text: 'Get started',),
-                 )
+                    text: 'Login / Sign Up',),
+                 ),
+                 const SizedBox(height: 16),
+                      MainButton(
+                        text: 'Login with Google',
+                         backgroundColor: ThemeColors.navyTextColor,
+                        textColor: ThemeColors.scaffoldBgColor,
+                        iconPath: 'assets/images/google.png',
+                        onTap: () {},
+                      ),
                 ],
               ),
             ),

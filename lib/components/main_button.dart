@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:grad/helpers/theme_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:grad/helpers/font_size.dart';
@@ -23,13 +24,13 @@ class MainButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 75,
+        height: 55,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: backgroundColor == null
-              ? ThemeColors.primaryColor
+           color: backgroundColor == null
+              ? const Color.fromARGB(233, 254, 222, 141)
               : backgroundColor,
-          borderRadius: BorderRadius.circular(28),
+          borderRadius: BorderRadius.circular(23),
         ),
         child: Center(
           child: Row(
@@ -48,10 +49,10 @@ class MainButton extends StatelessWidget {
                 text,
                 style: GoogleFonts.poppins(
                   color: textColor == null
-                      ? ThemeColors.whiteTextColor
+                      ? ThemeColors.navyTextColor
                       : textColor,
-                  fontSize: FontSize.large,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 15.5,
+                  fontWeight:FontWeight.w600,
                 ),
               ),
             ],
@@ -59,5 +60,6 @@ class MainButton extends StatelessWidget {
         ),
       ),
     );
+
   }
 }

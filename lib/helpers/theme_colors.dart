@@ -1,14 +1,7 @@
 import 'package:flutter/material.dart';
 
-
-
 class ThemeColors  {
-static const Color primaryColor =  Color.fromARGB(255, 232, 222, 44);
-  static const Color scaffoldBgColor = Color(0xFF0C0B0C);
-  static const Color textFieldBgColor = Color(0xFF23262B);
-  static const Color textFieldHintColor = Color(0xFF777777);
-
-  static const Color titleColor = Color(0xFF14213F);
-  static const Color whiteTextColor = Color.fromARGB(255, 104, 105, 91);
-  static const Color greyTextColor = Color(0xFF595959);
-  }
+static const Color primaryColor =  Color.fromARGB(252, 254, 222, 141);
+  static const Color scaffoldBgColor = Color.fromARGB(255, 255, 255, 255);
+  static const Color navyTextColor = Color(0xff000058);
+}
